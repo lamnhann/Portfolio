@@ -1,5 +1,5 @@
 import React from "react";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
+import portfolio from "../assets/portfolio/portfolio.png";
 import installNode from "../assets/portfolio/installNode.jpg";
 import navbar from "../assets/portfolio/navbar.jpg";
 import reactParallax from "../assets/portfolio/reactParallax.jpg";
@@ -10,27 +10,39 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: portfolio,
+      code: 'https://github.com/lamnhann/portfolio',
+      demo: 'clinquant-tiramisu-41deb5.netlify.app'
     },
     {
       id: 2,
       src: reactParallax,
+      code: '#',
+      demo: '#'
     },
     {
       id: 3,
       src: navbar,
+      code: '#',
+      demo: '#'
     },
     {
       id: 4,
       src: reactSmooth,
+      code: '#',
+      demo: '#'
     },
     {
       id: 5,
       src: installNode,
+      code: '#',
+      demo: '#'
     },
     {
       id: 6,
       src: reactWeather,
+      code: '',
+      demo: ''
     },
   ];
 
@@ -57,10 +69,14 @@ const Portfolio = () => {
               />
               <div className="flex items-center justify-center">
                 <button className=" w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
+                  <a href={portfolio.demo}>
+                    Demo
+                  </a>
                 </button>
                 <button className="px-6 py-3 w-1/2 m-4 duration-200 hover:scale-105">
-                  Code
+                  <a href={portfolio.code}>
+                    Code
+                  </a>
                 </button>
               </div>
             </div>
